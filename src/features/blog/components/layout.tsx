@@ -1,7 +1,13 @@
-export function BlogPageLayout({ children }: React.PropsWithChildren) {
+import { Outlet } from "react-router";
+import { BlogHeader } from "./header";
+
+export function BlogPageLayout() {
   return (
     <>
-      <main className="mx-auto px-6">{children}</main>
+      <BlogHeader />
+      <main className="max-w-4xl flex flex-col items-center mx-auto px-3 sm:px-6">
+        <Outlet />
+      </main>
     </>
   );
 }

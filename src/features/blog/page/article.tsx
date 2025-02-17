@@ -1,16 +1,16 @@
 import hljs from "highlight.js";
-import { use, useEffect } from "react";
 import dayjs from "dayjs";
+import Markdown from "react-markdown";
+import { use, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import { ApiResponse } from "../../../lib/api-client";
-import Markdown from "react-markdown";
-
-import "../../../styles/post.css";
 import { getArticle } from "../api";
 import { BlogHeader } from "../components/header";
-import { getArticleHeaders } from "../../markdown/lib/lib";
 import { BlogPageLayout } from "../components/layout";
 import { LoadingSupense } from "../../../components/loading";
+
+import "../../../styles/post.css";
+import { getArticleHeaders } from "../lib";
 
 export function BlogArticlePage() {
   const { id } = useParams();
@@ -18,11 +18,11 @@ export function BlogArticlePage() {
   if (!id) return <h1>Nenhum id</h1>;
 
   return (
-    <BlogPageLayout>
+    <>
       <LoadingSupense message={"Carregando artigo..."}>
         <BlogArticle articlePromise={getArticle(id)} />
       </LoadingSupense>
-    </BlogPageLayout>
+    </>
   );
 }
 
@@ -35,7 +35,7 @@ export function BlogArticle({ articlePromise }: { articlePromise: any }) {
 
   if (!result.success || result.data.startsWith("<!doctype html>"))
     return (
-      <h1>
+      <h1 className="mt-10">
         Não foi encontrado nenhum artigo com o ID <i>{id}</i>
       </h1>
     );
@@ -51,8 +51,7 @@ export function BlogArticle({ articlePromise }: { articlePromise: any }) {
 
   return (
     <>
-      <BlogHeader />
-      <main className="mt-10 px-5">
+      <div className="mt-10">
         <header className="max-w-3xl mx-auto mb-8">
           <h1 className="text-2xl font-bold mb-2">{headers.title}</h1>
           <div className="text-sm text-gray-500">
@@ -74,7 +73,7 @@ export function BlogArticle({ articlePromise }: { articlePromise: any }) {
         <article className="max-w-3xl mx-auto">
           <Markdown className="post">{data}</Markdown>
         </article>
-      </main>
+      </div>
       <footer className="footer max-w-3xl mx-auto px-6">
         <hr />
         <div className="my-6">

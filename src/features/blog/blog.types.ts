@@ -1,4 +1,4 @@
-export type BlogArticleData = {
+export type BlogArticleHeadersType = {
   id: string;
   author: string;
   contentHtml: string;

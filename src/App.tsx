@@ -3,6 +3,7 @@ import { HomePage } from "./pages/home";
 import { BlogHomePage } from "./features/blog/page/blog-home";
 import { BlogArticlePage } from "./features/blog/page/article";
 import { LoadingSupense } from "./components/loading";
+import { BlogPageLayout } from "./features/blog/components/layout";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
 
-          <Route path="blog">
+          <Route path="blog" element={<BlogPageLayout />}>
             <Route index element={<BlogHomePage articles={[]} tags={[]} />} />
             <Route path=":id" element={<BlogArticlePage />} />
           </Route>

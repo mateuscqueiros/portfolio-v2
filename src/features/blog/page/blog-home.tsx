@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import { BlogArticleHeadersType } from "../blog.types";
-import { BlogHeader } from "../components/header";
 import { BlogArticlePreview } from "../components/preview";
 
 export function BlogHomePage({
@@ -12,7 +11,6 @@ export function BlogHomePage({
 }) {
   return (
     <>
-      <BlogHeader />
       <main className="max-w-4xl mx-auto px-6">
         {tags.length > 0 && (
           <i>

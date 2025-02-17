@@ -1,7 +1,8 @@
 import { ApiResponse, fetcher } from "../../../lib/api-client";
+import { markdownDefaults } from "../lib/markdown-defaults";
 
 export const getArticle = async (id: string) => {
-  return await fetcher<ApiResponse<string>>(`/article/${id}.md`)
+  return await fetcher<ApiResponse<string>>(`${markdownDefaults.directory}${id}.md`)
     .then((response) => {
       return {
         success: true,

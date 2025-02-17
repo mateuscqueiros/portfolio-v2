@@ -1,8 +1,8 @@
-import { mardownDefaults } from "./defaults";
+import { markdownDefaults } from "./markdown-defaults";
 
 export function getArticleHeaders(article: string) {
 
-  const headers = article.split(mardownDefaults.headersSplitter)[1];
+  const headers = article.split(markdownDefaults.headersSplitter)[1];
 
   return headers.split("\n").reduce(
     (acc, i) => {
