@@ -29,6 +29,12 @@
   @apply text-gray-300 my-6;
 }
 
+.post p code {
+  padding-block: 3px;
+  padding-inline: 6px;
+  @apply text-sm rounded-md bg-muted text-primary;
+}
+
 .post h2+p {
   @apply mt-1;
 }
@@ -42,12 +48,12 @@
 }
 
 .post a {
-  box-shadow: var(--blog-border-shadow);
+  @apply underline text-white font-medium;
 }
 
-.post a:hover {
-  box-shadow: var(--blog-bg-shadow);
-}
+/*.post a {*/
+/*  @apply shadow-link text-white hover:shadow-link-hover;*/
+/*}*/
 
 .post ul,
 .post ol {
@@ -108,9 +114,6 @@
   margin: 0;
 }
 
-.post a {
-  @apply underline text-white font-medium;
-}
 
 .footer hr {
   opacity: 0.5;

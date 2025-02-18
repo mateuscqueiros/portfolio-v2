@@ -63,7 +63,7 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
             </>
           )}
         </div>
-        <div className="flex flex-col items-center w-full mt-10 gap-12 pb-12">
+        <div className="flex flex-col items-center w-full mt-10 gap-8 pb-12">
           {articles &&
             sortedArticles.map((article) => (
               <BlogArticlePreview article={article} key={article.id} />

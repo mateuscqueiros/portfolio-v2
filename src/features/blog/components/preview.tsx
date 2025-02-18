@@ -11,7 +11,7 @@ export function BlogArticlePreview({ article }: { article: BlogArticleType }) {
         to={`/blog/${article.id}`}
       >
         <div className="w-full flex flex-col justify-start">
-          <h2 className="text-2xl font-bold text-gray-100">{article.title}</h2>
+          <h2 className="text-xl font-bold text-gray-100">{article.title}</h2>
           <div className="text-muted-foreground flex items-center gap-1 mt-1">
             <span className="text-sm">
               {dayjs(article.createdAt).format("DD/MM/YYYY")}

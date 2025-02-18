@@ -7,11 +7,15 @@
 
   --color-selection-background: color-mix(in srgb, var(--color-primary) 10%, transparent);
 
+  --color-muted: #292524;
   --color-muted-foreground: #99a1af;
   --color-prose-foreground: #d7d3d4;
 
   --color-background-start-rgb: #0c192a;
   --color-background-end-rgb: #15263d;
+
+  --shadow-link: inset 0 -1.5px 0 color-mix(in srgb, var(--color-primary) 50%, transparent);
+  --shadow-link-hover: inset 0 -1.8em 0 color-mix(in srgb, var(--color-primary) 10%, transparent);
 }
 
 body {
