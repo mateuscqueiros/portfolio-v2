@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <>
-      <header className="w-full flex flex-row flex-wrap justify-between items-center my-4 pb-4 px-4">
+      <header className="w-full flex flex-row flex-wrap justify-between items-center my-4 pb-4 mx-4">
         <Link className="shadow-none hover:shadow-none" to="/" viewTransition>
           <h2 className="text-xl font-semibold text-center md:text-left font-mono line-clamp-4">
             Mateus Queirós

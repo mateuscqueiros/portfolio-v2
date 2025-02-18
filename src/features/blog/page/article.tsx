@@ -30,8 +30,6 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
 
   const result = use<ApiResponse<string>>(getArticle);
 
-  console.log(result);
-
   if (!result.success || result.data.startsWith("<!doctype html>"))
     return (
       <h1 className="mt-10">

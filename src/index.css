@@ -1,25 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #ea580c;
+  --color-primary: #FFC107;
   --color-secondary: #5094ed;
   --color-tertiary: #676767ed;
 
+  --color-selection-background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+
   --color-muted-foreground: #99a1af;
-
-  --color-button-bg: transparent;
-  --color-button-bg-hover: #1568d5;
-
-  --color-badge-bg-color: #1568d5;
-  --color-badge-color: #fff;
+  --color-prose-foreground: #d7d3d4;
 
   --color-background-start-rgb: #0c192a;
   --color-background-end-rgb: #15263d;
-
-  --color-blog-border: #1568d5;
-  --color-blog-bg: #4796ff2b;
-  --blog-border-shadow: inset 0 -2px 0 var(--blog-border);
-  --blog-bg-shadow: inset 0 -1.8em 0 var(--blog-bg);
 }
 
 body {
@@ -47,6 +39,11 @@ textarea {
   letter-spacing: 0.01em;
 }
 
+p {
+  line-height: 1.75;
+  @apply text-prose-foreground mb-5;
+}
+
 h1 {
   @apply text-3xl;
 }
@@ -67,5 +64,5 @@ h1 {
 }
 
 ::selection {
-  @apply bg-tertiary;
+  @apply bg-selection-background;
 }
