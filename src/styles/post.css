@@ -51,10 +51,6 @@
   @apply underline text-white font-medium;
 }
 
-/*.post a {*/
-/*  @apply shadow-link text-white hover:shadow-link-hover;*/
-/*}*/
-
 .post ul,
 .post ol {
   @apply p-4 pt-0

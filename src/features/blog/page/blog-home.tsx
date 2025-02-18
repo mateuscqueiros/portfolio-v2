@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
 import { BlogArticlePreview } from "../components/preview";
 import { LoadingSupense } from "../../../components/loading";
 import { use, useState } from "react";
@@ -48,28 +48,26 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
   );
 
   return (
-    <>
-      <div className="max-w-4xl w-full mx-auto">
-        <div
-          className="w-full flex justify-center text-muted-foreground cursor-pointer hover:underline"
-          onClick={() => setShouldFilter(!shouldFilter)}
-        >
-          {shouldFilter && filterTags.length > 0 && (
-            <>
-              <span className="mr-2">Filtrando resultados para:</span>
-              {filterTags.map((tag) => (
-                <ArticleTag key={tag} tag={tag} />
-              ))}
-            </>
-          )}
-        </div>
-        <div className="flex flex-col items-center w-full mt-10 gap-8 pb-12">
-          {articles &&
-            sortedArticles.map((article) => (
-              <BlogArticlePreview article={article} key={article.id} />
+    <div className="max-w-4xl w-full mx-auto prose">
+      <div
+        className="w-full flex justify-center text-muted-foreground cursor-pointer hover:underline"
+        onClick={() => setShouldFilter(!shouldFilter)}
+      >
+        {shouldFilter && filterTags.length > 0 && (
+          <>
+            <span className="mr-2">Filtrando resultados para:</span>
+            {filterTags.map((tag) => (
+              <ArticleTag key={tag} tag={tag} />
             ))}
-        </div>
+          </>
+        )}
       </div>
-    </>
+      <div className="flex flex-col items-center w-full mt-10 gap-10 pb-12">
+        {articles &&
+          sortedArticles.map((article) => (
+            <BlogArticlePreview article={article} key={article.id} />
+          ))}
+      </div>
+    </div>
   );
 }

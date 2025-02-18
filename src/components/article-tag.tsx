@@ -6,11 +6,15 @@ export type ArticleTagProps = {
 };
 
 export function ArticleTag({ tag, noLink = false }: ArticleTagProps) {
-  return noLink ? (
-    <span className="mr-2">#{tag}</span>
-  ) : (
-    <Link to={`/blog?tags=${tag}`} key={tag} className="mr-2">
-      #{tag}
-    </Link>
+  return (
+    <span className="not-prose mr-2">
+      {noLink ? (
+        <>#{tag}</>
+      ) : (
+        <Link to={`/blog?tags=${tag}`} key={tag}>
+          #{tag}
+        </Link>
+      )}
+    </span>
   );
 }

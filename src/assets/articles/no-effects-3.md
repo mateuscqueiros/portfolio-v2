@@ -1,5 +1,5 @@
 ---
-title: Você talvez não precise de um Effect
+title: Create React App depreciado
 tags: react, javascript, next
 createdAt: 2023-12-12T19:56:59Z
 lastUpdate: 2023-12-25T19:56:59Z

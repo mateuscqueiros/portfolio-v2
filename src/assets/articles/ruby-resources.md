@@ -56,6 +56,5 @@ Tenho estudado muito Ruby ultimamente. Aqui estão alguns dos recursos que mais 
 
 - [Reducing Enumerable](https://medium.com/@baweaver/reducing-enumerable-part-one-the-journey-begins-ddc1d4108490)
 - [What are objects?](https://web.archive.org/web/20190205073042/http://codelikethis.com/lessons/learn_to_code/objects)
-
 - [Ruby Core Model](http://jeromedalbert.com/a-diagram-of-the-ruby-core-object-model/)
 

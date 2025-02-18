@@ -5,14 +5,13 @@ import { ArticleTag } from "../../../components/article-tag";
 
 export function BlogArticlePreview({ article }: { article: BlogArticleType }) {
   return (
-    <div className="w-full flex flex-col">
-      <Link
-        className="display-inline w-fit font-semibold text-link"
-        to={`/blog/${article.id}`}
-      >
+    <div className="w-full flex flex-col dark:text-slate-300 prose-a:no-underline  prose-p:mb-0 max-w-full prose-p:text-slate-700 prose-p:dark:text-slate-300 prose-h2:mt-0 prose-h2:mb-1 prose-h2:dark:text-white prose-h2:text-lg">
+      <Link className="group display-inline w-fit" to={`/blog/${article.id}`}>
         <div className="w-full flex flex-col justify-start">
-          <h2 className="text-xl font-bold text-gray-100">{article.title}</h2>
-          <div className="text-muted-foreground flex items-center gap-1 mt-1">
+          <h2 className="text-xl font-bold group-hover:text-primary group-hover:underline decoration-1">
+            {article.title}
+          </h2>
+          <div className="text-muted-foreground flex items-center gap-1">
             <span className="text-sm">
               {dayjs(article.createdAt).format("DD/MM/YYYY")}
             </span>
@@ -25,7 +24,7 @@ export function BlogArticlePreview({ article }: { article: BlogArticleType }) {
             </span>
           </div>
           {article.shortDescription && (
-            <p className="mt-2 text-gray-300">{article.shortDescription}</p>
+            <p className="mt-2">{article.shortDescription}</p>
           )}
         </div>
       </Link>

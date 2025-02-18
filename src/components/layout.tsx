@@ -6,7 +6,7 @@ export type MainLayoutProps = {};
 export function MainLayout({}: MainLayoutProps) {
   return (
     <>
-      <div className="max-w-4xl flex flex-col items-center mx-auto px-6">
+      <div className="max-w-4xl flex flex-col items-center mx-auto px-6 prose prose-slate">
         <Header />
         <main className="w-full flex flex-col">
           <Outlet />

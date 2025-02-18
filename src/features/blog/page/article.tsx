@@ -7,9 +7,10 @@ import { ApiResponse } from "../../../lib/api-client";
 import { getArticle } from "../api";
 import { LoadingSupense } from "../../../components/loading";
 import { getArticle as getArticleInfo } from "../lib";
-
-import "../../../styles/post.css";
 import { ArticleTag } from "../../../components/article-tag";
+import { BlogArticleContent } from "../components/article-content";
+
+// import "../../../styles/post.css";
 
 export function BlogArticlePage() {
   const { id } = useParams();
@@ -47,7 +48,9 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
     <>
       <div className="mt-10">
         <header className="max-w-3xl mx-auto mb-8">
-          <h1 className="text-2xl font-bold mb-2">{article.title}</h1>
+          <h1 className="text-2xl dark:text-white font-bold mb-2">
+            {article.title}
+          </h1>
           <div className="flex flex-row justify-between items-center text-sm text-muted-foreground">
             <div>
               <span className="">Publicado em </span>
@@ -71,12 +74,14 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
           />
         )}
 
-        <article className="max-w-3xl mx-auto">
+        <BlogArticleContent>
           <Markdown className="post">{article.content}</Markdown>
-        </article>
+        </BlogArticleContent>
       </div>
       <footer className="flex justify-center footer max-w-3xl mx-auto text-xs w-full my-6">
-        <>Copyright © 2025 Mateus Queirós</>
+        <span className="font-mono dark:text-white text-black">
+          Copyright © 2025 Mateus Queirós
+        </span>
       </footer>
       <>
         <link
