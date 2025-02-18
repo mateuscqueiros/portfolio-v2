@@ -1,10 +1,12 @@
 ---
 title: Conteúdos para Ruby
-tags: Ruby
-createdAt: 2023-12-12T19:56:59Z
+tags: ruby
+createdAt: 2024-01-01T19:56:59Z
 lastUpdate: 2023-12-12T19:56:59Z
 author: Mateus Queirós
 banner: https://t3.ftcdn.net/jpg/03/81/40/52/360_F_381405202_LxNjW7yxuM4BdKEQYKqYGtJ04G0KU5Qg.jpg
+id: ruby-resources
+shortDescription: Tenho estudado muito Ruby ultimamente.
 ---
 
 Tenho estudado muito Ruby ultimamente. Aqui estão alguns dos recursos que mais me ajudaram.
@@ -48,7 +50,7 @@ Tenho estudado muito Ruby ultimamente. Aqui estão alguns dos recursos que mais 
 
 > "As developers, we *want* to start with all our tests failing. If they were all green and running, there would be nothing for us to do."
 >
-> &mdash; <cite>Rony Shabo on [his Medium article](https://medium.com/@roni.shabo/overcoming-ruby-error-messages-ebf53928b64e)</cite>
+> &mdash; Rony Shabo on [his Medium article](https://medium.com/@roni.shabo/overcoming-ruby-error-messages-ebf53928b64e)
 
 ### Other
 

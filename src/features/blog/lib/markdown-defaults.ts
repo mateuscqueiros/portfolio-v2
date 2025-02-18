@@ -1,4 +1,4 @@
 export const markdownDefaults = {
   headersSplitter: "---",
-  directory: "/articles/"
+  directory: "/src/assets/articles"
 }

@@ -5,12 +5,11 @@ import { use, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import { ApiResponse } from "../../../lib/api-client";
 import { getArticle } from "../api";
-import { BlogHeader } from "../components/header";
-import { BlogPageLayout } from "../components/layout";
 import { LoadingSupense } from "../../../components/loading";
+import { getArticle as getArticleInfo } from "../lib";
 
 import "../../../styles/post.css";
-import { getArticleHeaders } from "../lib";
+import { ArticleTag } from "../../../components/article-tag";
 
 export function BlogArticlePage() {
   const { id } = useParams();
@@ -20,16 +19,16 @@ export function BlogArticlePage() {
   return (
     <>
       <LoadingSupense message={"Carregando artigo..."}>
-        <BlogArticle articlePromise={getArticle(id)} />
+        <BlogArticle getArticle={getArticle(id)} />
       </LoadingSupense>
     </>
   );
 }
 
-export function BlogArticle({ articlePromise }: { articlePromise: any }) {
+export function BlogArticle({ getArticle }: { getArticle: any }) {
   const { id } = useParams();
 
-  const result = use<ApiResponse<string>>(articlePromise);
+  const result = use<ApiResponse<string>>(getArticle);
 
   console.log(result);
 
@@ -40,10 +39,7 @@ export function BlogArticle({ articlePromise }: { articlePromise: any }) {
       </h1>
     );
 
-  const headers = getArticleHeaders(result.data);
-  const data = result.data.split("---")[2];
-
-  console.log(headers);
+  const article = getArticleInfo(result.data);
 
   useEffect(() => {
     hljs.highlightAll();
@@ -53,46 +49,36 @@ export function BlogArticle({ articlePromise }: { articlePromise: any }) {
     <>
       <div className="mt-10">
         <header className="max-w-3xl mx-auto mb-8">
-          <h1 className="text-2xl font-bold mb-2">{headers.title}</h1>
-          <div className="text-sm text-gray-500">
-            <span>Publicado em </span>
-            <time data-time={headers.createdAt}>
-              {dayjs(headers.createdAt).format("DD/M/YYYY")}
-            </time>
+          <h1 className="text-2xl font-bold mb-2">{article.title}</h1>
+          <div className="flex flex-row justify-between items-center text-sm text-muted-foreground">
+            <div>
+              <span className="">Publicado em </span>
+              <time data-time={article.createdAt}>
+                {dayjs(article.createdAt).format("DD/MM/YYYY")}
+              </time>
+            </div>
+
+            <div>
+              {article.tags.length > 0 &&
+                article.tags.map((tag) => <ArticleTag key={tag} tag={tag} />)}
+            </div>
           </div>
         </header>
 
-        {headers.banner && (
+        {article.banner && (
           <img
             className="w-full max-w-4xl mx-auto my-6"
-            src={headers.banner}
+            src={article.banner}
             alt=""
           />
         )}
 
         <article className="max-w-3xl mx-auto">
-          <Markdown className="post">{data}</Markdown>
+          <Markdown className="post">{article.content}</Markdown>
         </article>
       </div>
-      <footer className="footer max-w-3xl mx-auto px-6">
-        <hr />
-        <div className="my-6">
-          <i>
-            Tags:{" "}
-            {headers.tags
-              .split(",")
-              .map((s) => s.trim())
-              .map((tag: string) => (
-                <Link
-                  className="ml-2 text-link"
-                  key={tag}
-                  to={`/blog?tags=${tag}`}
-                >
-                  {tag}
-                </Link>
-              ))}
-          </i>
-        </div>
+      <footer className="flex justify-center footer max-w-3xl mx-auto text-xs w-full my-6">
+        <>Copyright © 2025 Mateus Queirós</>
       </footer>
       <link
         rel="stylesheet"

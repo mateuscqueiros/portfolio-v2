@@ -1,10 +1,11 @@
+import { BlogArticleType } from "../blog.types";
 import { markdownDefaults } from "./markdown-defaults";
 
-export function getArticleHeaders(article: string) {
+export function getArticle(article: string): BlogArticleType {
 
   const headers = article.split(markdownDefaults.headersSplitter)[1];
 
-  return headers.split("\n").reduce(
+  const fileHeaders = headers.split("\n").reduce(
     (acc, i) => {
       const [key, value] = i.split(": ");
       return key.length > 0
@@ -13,4 +14,11 @@ export function getArticleHeaders(article: string) {
     },
     {} as { [key: string]: string },
   )
+
+  return { ...fileHeaders, tags: fileHeaders.tags.split(",").map((s) => s.trim()), content: article.split("---")[2] } as BlogArticleType
 }
+
+export function getFileName(filePath: string): string {
+  return filePath.split("/").pop()?.replace(/\.[^/.]+$/, "") || "";
+}
+

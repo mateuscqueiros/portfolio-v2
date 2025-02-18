@@ -5,6 +5,8 @@ import { BlogArticlePage } from "./features/blog/page/article";
 import { LoadingSupense } from "./components/loading";
 import { BlogPageLayout } from "./features/blog/components/layout";
 
+// https://ouassim.tech/
+
 function App() {
   return (
     <LoadingSupense message={"Carregando..."}>
@@ -13,7 +15,7 @@ function App() {
           <Route index element={<HomePage />} />
 
           <Route path="blog" element={<BlogPageLayout />}>
-            <Route index element={<BlogHomePage articles={[]} tags={[]} />} />
+            <Route index element={<BlogHomePage />} />
             <Route path=":id" element={<BlogArticlePage />} />
           </Route>
         </Routes>
