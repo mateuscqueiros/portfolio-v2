@@ -67,18 +67,20 @@
   list-style-type: decimal;
 }
 
-.post pre code {
-  @apply p-4 bg-transparent;
+.post pre {
+  @apply overflow-x-auto max-w-[92vw];
 }
 
 .post pre {
   @apply my-6 mx-0 bg-white rounded-sm overflow-x-auto;
 }
 
-.post p code {
-  padding: 2px 4px;
+.post .hljs {
+  overflow-x: scroll !important;
+}
 
-  @apply text-sm bg-primary rounded-sm whitespace-pre;
+.post pre code {
+  @apply p-4 bg-transparent;
 }
 
 .post blockquote {

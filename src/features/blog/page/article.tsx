@@ -2,7 +2,7 @@ import hljs from "highlight.js";
 import dayjs from "dayjs";
 import Markdown from "react-markdown";
 import { use, useEffect } from "react";
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
 import { ApiResponse } from "../../../lib/api-client";
 import { getArticle } from "../api";
 import { LoadingSupense } from "../../../components/loading";
@@ -80,16 +80,18 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
       <footer className="flex justify-center footer max-w-3xl mx-auto text-xs w-full my-6">
         <>Copyright © 2025 Mateus Queirós</>
       </footer>
-      <link
-        rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css"
-        media="screen and (prefers-color-scheme: dark)"
-      />
-      <link
-        rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css"
-        media="screen and (prefers-color-scheme: light)"
-      />
+      <>
+        <link
+          rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css"
+          media="screen and (prefers-color-scheme: dark)"
+        />
+        <link
+          rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css"
+          media="screen and (prefers-color-scheme: light)"
+        />
+      </>
     </>
   );
 }
