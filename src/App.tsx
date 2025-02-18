@@ -5,6 +5,7 @@ import { BlogArticlePage } from "./features/blog/page/article";
 import { LoadingSupense } from "./components/loading";
 import { MainLayout } from "./components/layout";
 import { NoMatch } from "./pages/no-match";
+import { useEffect } from "react";
 
 // https://ouassim.tech/
 

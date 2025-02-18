@@ -1,8 +1,13 @@
 export function HomePage() {
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
     <div className="prose">
       <div className="w-full flex flex-col items-start mt-10 prose prose-p:dark:text-slate-300 prose-headings:dark:text-white">
         <img
+          onClick={toggleTheme}
           src="/src/assets/me.jpg"
           alt="me"
           className="w-full max-w-[90px] rounded-full mb-10"

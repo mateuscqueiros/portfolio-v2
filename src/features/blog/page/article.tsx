@@ -39,7 +39,7 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
     result.data.startsWith("<!doctype html>")
   )
     return (
-      <h1 className="mt-10">
+      <h1 className="mt-10 text-black dark:text-white">
         Não foi encontrado nenhum artigo com o ID <i>{id}</i>
       </h1>
     );
@@ -54,10 +54,10 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
     <>
       <div className="mt-10">
         <header className="max-w-3xl mx-auto mb-8">
-          <h1 className="text-2xl dark:text-white font-bold mb-2">
+          <h1 className="text-3xl dark:text-white font-bold mb-2">
             {article.title}
           </h1>
-          <div className="flex flex-row justify-between items-center text-sm text-muted-foreground">
+          <div className="flex flex-row flex-wrap gap-y-2 gap-x-4 justify-between items-center text-sm text-muted-foreground">
             <div>
               <span className="">Publicado em </span>
               <time data-time={article.createdAt}>
