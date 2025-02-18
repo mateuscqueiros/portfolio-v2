@@ -1,3 +1,5 @@
 export function NoMatch() {
-  return <h1>Nothing to see here!</h1>;
+  return (
+    <h1 className="text-md dark:text-white text-black">Nothing to see here!</h1>
+  );
 }

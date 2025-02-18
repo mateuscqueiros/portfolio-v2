@@ -31,7 +31,13 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
 
   const result = use<ApiResponse<string>>(getArticle);
 
-  if (!result.success || result.data.startsWith("<!doctype html>"))
+  console.log(result);
+
+  if (
+    !result.success ||
+    !result.data ||
+    result.data.startsWith("<!doctype html>")
+  )
     return (
       <h1 className="mt-10">
         Não foi encontrado nenhum artigo com o ID <i>{id}</i>

@@ -1,19 +1,22 @@
-import { ApiResponse, fetcher } from "../../../lib/api-client";
+import { fetcher } from "../../../lib/api-client";
 import { markdownDefaults } from "../lib/markdown-defaults";
 
 export const getArticle = async (id: string) => {
-  return await fetcher<ApiResponse<string>>(`${markdownDefaults.directory}/${id}.md`)
-    .then((response) => {
-      return {
-        success: true,
-        data: response.data,
-      };
-    })
-    .catch((error) => ({
-      success: false,
-      message: "Erro ao carregar o arquivo",
-      error,
-    }));
+  return await import(`../../../assets/articles/${id}.md` as any).then(async (res) => {
+    console.log(res.default)
+    return fetcher(res.default)
+      .then((response) => {
+        return {
+          success: true,
+          data: response.data,
+        };
+      })
+      .catch((error) => ({
+        success: false,
+        message: "Erro ao carregar o arquivo",
+        error,
+      }));
+  })
 };
 
 export async function getAllArticles() {
