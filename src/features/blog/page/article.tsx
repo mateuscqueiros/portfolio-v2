@@ -50,9 +50,9 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
 
   return (
     <>
-      <div className="mt-5">
+      <div>
         <header className="max-w-3xl mx-auto mb-8">
-          <h1 className="text-3xl dark:text-white font-semibold mb-2">
+          <h1 className="text-3xl dark:text-white font-semibold mb-2 md:mb-4">
             {article.title}
           </h1>
           <div className="flex flex-row flex-wrap gap-y-2 gap-x-4 justify-between items-center text-sm text-muted-foreground">

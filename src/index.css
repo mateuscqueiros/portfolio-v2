@@ -23,6 +23,7 @@
   --color-muted-foreground: #82868c;
 
   --color-body: #0c192a;
+  --font-mono: "Geist Mono", monospace;
 }
 
 @theme inline {
@@ -34,8 +35,6 @@
   --color-muted-foreground: var(--color-muted-foreground);
 
   --color-body: var(--color-body);
-
-  --font-main: var(--font-main);
 }
 
 
@@ -47,8 +46,10 @@ body {
   background-repeat: no-repeat;
 
   @apply bg-body transition-colors duration-100;
+}
 
-
+article pre code {
+  padding: .75rem !important;
 }
 
 ::selection {

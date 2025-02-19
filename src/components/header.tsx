@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <>
-      <header className="w-full flex flex-row flex-wrap justify-between items-center my-4 py-4 mb-0 dark:text-white">
+      <header className="w-full flex flex-row flex-wrap justify-between items-center my-4 py-4 mb-0 dark:text-white gap-y-4">
         <Link
           className="shadow-none hover:shadow-none not-prose"
           to="/"
