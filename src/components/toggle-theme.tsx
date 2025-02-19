@@ -1,18 +1,9 @@
 import { useEffect, useState } from "react";
-import MoonIcon from "../assets/moon.svg";
-import SunIcon from "../assets/sun.svg";
 
 export function ToggleTheme() {
   const [theme, setTheme] = useState(
     () => window.localStorage.getItem("theme") || "dark",
   );
-
-  const toggleTheme = () => {
-    document.documentElement.classList.toggle("dark");
-    setTheme(
-      document.documentElement.classList.contains("dark") ? "dark" : "light",
-    );
-  };
 
   const setThemeDark = () => {
     window.localStorage.setItem("theme", "dark");
