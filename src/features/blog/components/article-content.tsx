@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export type BlogArticleType = { content: string };
 
@@ -27,7 +27,7 @@ export function BlogArticleContent({ content }: BlogArticleType) {
                 PreTag="div"
                 children={String(children).replace(/\n$/, "")}
                 language="javascript"
-                style={atomOneDark}
+                style={docco}
                 className="not-prose !p-6"
               />
             ) : (
