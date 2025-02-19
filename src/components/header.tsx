@@ -17,15 +17,16 @@ export function Header() {
           to="/"
           viewTransition
         >
-          <h2 className="text-xl font-semibold text-center md:text-left font-mono line-clamp-4 not-prose">
+          <h2 className="text-xl font-semibold text-center md:text-left font-mono line-clamp-4 not-prose text-black dark:text-white">
             Mateus Queirós
           </h2>
         </Link>
-        <ul className="flex flex-row flex-wrap items-center space-x-4 not-prose">
+        <ul className="flex flex-row flex-wrap items-center space-x-4 not-prose text-black dark:text-white">
           {headerLinks.map((link) => (
             <li key={link.name}>
               <Link
-                className={`not-prose text-sm font-medium decoration-[0.1em] underline-offset-4 decoration-wavy decoration-primary hover:underline hover:text-primary ${path.pathname === link.href ? "underline" : ""}`}
+                className={`not-prose text-sm font-medium decoration-[0.1em] underline-offset-4 decoration-wavy
+                  decoration-primary hover:underline hover:text-primary ${path.pathname === link.href ? "underline" : ""}`}
                 to={{ pathname: link.href }}
                 target={link.name === "resume" ? "_blank" : ""}
                 viewTransition

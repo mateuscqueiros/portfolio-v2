@@ -52,9 +52,9 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
 
   return (
     <>
-      <div className="mt-10">
+      <div className="mt-5">
         <header className="max-w-3xl mx-auto mb-8">
-          <h1 className="text-3xl dark:text-white font-bold mb-2">
+          <h1 className="text-3xl dark:text-white font-semibold mb-2">
             {article.title}
           </h1>
           <div className="flex flex-row flex-wrap gap-y-2 gap-x-4 justify-between items-center text-sm text-muted-foreground">
@@ -84,11 +84,6 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
           <Markdown className="post">{article.content}</Markdown>
         </BlogArticleContent>
       </div>
-      <footer className="flex justify-center footer max-w-3xl mx-auto text-xs w-full my-6">
-        <span className="font-mono dark:text-white text-black">
-          Copyright © 2025 Mateus Queirós
-        </span>
-      </footer>
       <>
         <link
           rel="stylesheet"

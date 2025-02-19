@@ -4,7 +4,6 @@ tags: ruby
 createdAt: 2024-01-01T19:56:59Z
 lastUpdate: 2023-12-12T19:56:59Z
 author: Mateus Queirós
-banner: https://t3.ftcdn.net/jpg/03/81/40/52/360_F_381405202_LxNjW7yxuM4BdKEQYKqYGtJ04G0KU5Qg.jpg
 id: ruby-resources
 shortDescription: Tenho estudado muito Ruby ultimamente.
 ---
