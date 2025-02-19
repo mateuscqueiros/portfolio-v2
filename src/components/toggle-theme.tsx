@@ -23,7 +23,6 @@ export function ToggleTheme() {
     }
     const meta: any = document.querySelector("meta[name='theme-color']");
     if (!meta) return;
-    console.log(meta);
     meta.content = theme === "dark" ? "#0c192a" : "#ffffff";
   }, [theme]);
 
