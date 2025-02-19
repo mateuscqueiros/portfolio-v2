@@ -31,8 +31,6 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
 
   const result = use<ApiResponse<string>>(getArticle);
 
-  console.log(result);
-
   if (
     !result.success ||
     !result.data ||

@@ -5,8 +5,8 @@ import { ArticleTag } from "../../../components/article-tag";
 
 export function BlogArticlePreview({ article }: { article: BlogArticleType }) {
   return (
-    <div className="w-full flex flex-col dark:text-slate-300 prose-a:no-underline  prose-p:mb-0 max-w-full prose-p:text-slate-700 prose-p:dark:text-slate-300 prose-h2:mt-0 prose-h2:mb-1 prose-h2:dark:text-white prose-h2:text-lg">
-      <Link className="group display-inline w-fit" to={`/blog/${article.id}`}>
+    <div className="w-full flex flex-col not-prose max-w-full">
+      <Link className="group w-fit" to={`/blog/${article.id}`}>
         <div className="w-full flex flex-col justify-start">
           <h2 className="text-xl font-bold group-hover:text-primary group-hover:underline decoration-1">
             {article.title}

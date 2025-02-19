@@ -3,7 +3,6 @@ import { markdownDefaults } from "../lib/markdown-defaults";
 
 export const getArticle = async (id: string) => {
   return await import(`../../../assets/articles/${id}.md` as any).then(async (res) => {
-    console.log(res.default)
     return fetcher(res.default)
       .then((response) => {
         return {

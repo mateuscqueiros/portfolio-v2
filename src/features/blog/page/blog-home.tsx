@@ -48,7 +48,7 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
   );
 
   return (
-    <div className="max-w-4xl w-full mx-auto prose">
+    <div className="max-w-4xl w-full mx-auto">
       <div
         className="w-full flex justify-center text-muted-foreground cursor-pointer hover:underline"
         onClick={() => setShouldFilter(!shouldFilter)}
@@ -62,7 +62,7 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
           </>
         )}
       </div>
-      <div className="flex flex-col items-center w-full mt-10 gap-10 pb-12">
+      <div className="flex flex-col items-center w-full space-y-12 pb-12">
         {articles &&
           sortedArticles.map((article) => (
             <BlogArticlePreview article={article} key={article.id} />

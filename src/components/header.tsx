@@ -11,13 +11,13 @@ export function Header() {
 
   return (
     <>
-      <header className="w-full flex flex-row flex-wrap justify-between items-center my-4 py-4 mx-4 dark:text-white">
+      <header className="w-full flex flex-row flex-wrap justify-between items-center my-4 py-4 mb-0 dark:text-white">
         <Link
           className="shadow-none hover:shadow-none not-prose"
           to="/"
           viewTransition
         >
-          <h2 className="text-xl font-semibold text-center md:text-left font-mono line-clamp-4 not-prose text-black dark:text-white">
+          <h2 className="text-md font-semibold text-center md:text-left font-mono line-clamp-4 not-prose text-black dark:text-white">
             Mateus Queirós
           </h2>
         </Link>

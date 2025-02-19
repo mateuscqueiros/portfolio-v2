@@ -26,7 +26,7 @@ export function ToggleTheme() {
   }, []);
 
   return (
-    <div className="bg-blend-darken flex h-8 items-center justify-between gap-1 rounded-md border border-slate-300 dark:border-slate-700 p-1">
+    <div className="flex h-8 items-center justify-between gap-1 rounded-md border border-slate-300 dark:border-slate-700 p-1">
       <button
         onClick={setThemeLight}
         data-active={theme === "light" ? "true" : undefined}
