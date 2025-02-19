@@ -12,6 +12,7 @@
   --color-muted-foreground: #99a1af;
 
   --color-body: #ffffff;
+  --font-mono: "Geist Mono", monospace;
 }
 
 .dark {
