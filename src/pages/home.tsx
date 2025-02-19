@@ -70,7 +70,7 @@ export function HomePage() {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="min-w-[350px]"
+                className="block min-w-[350px]"
               >
                 {social.href}
               </a>
