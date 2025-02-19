@@ -8,13 +8,11 @@ export function ToggleTheme() {
   const setThemeDark = () => {
     window.localStorage.setItem("theme", "dark");
     setTheme("dark");
-    document.documentElement.classList.add("dark");
   };
 
   const setThemeLight = () => {
     window.localStorage.setItem("theme", "light");
     setTheme("light");
-    document.documentElement.classList.remove("dark");
   };
 
   useEffect(() => {
@@ -23,7 +21,10 @@ export function ToggleTheme() {
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, []);
+    const meta: any = document.querySelector("meta[name='theme-color']");
+    if (!meta) return;
+    meta.content = "<your-color>";
+  }, [theme]);
 
   return (
     <div className="flex h-8 items-center justify-between gap-1 rounded-md border border-slate-300 dark:border-slate-700 p-1">
