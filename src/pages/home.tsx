@@ -11,7 +11,7 @@ export function HomePage() {
         <img
           src="/me.jpg"
           alt="me"
-          className="w-full max-w-[90px] rounded-full !mt-0"
+          className="w-full max-w-[90px] rounded-full not-prose mb-8"
         />
         <h1 className="font-mono !mb-0 !text-3xl">Olá, sou Mateus</h1>
         <p className="!mb-0">
