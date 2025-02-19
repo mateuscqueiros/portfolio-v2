@@ -6,37 +6,34 @@
 :root {
   --color-primary: #f0b100;
 
-  --color-selection-background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --color-selection: color-mix(in srgb, var(--color-primary) 20%, transparent);
 
   --color-muted: #f5f5f4;
   --color-muted-foreground: #99a1af;
 
-  --color-background-start-rgb: #ffffff;
-  --color-background-end-rgb: #e7e7e7;
+  --color-body: #ffffff;
 }
 
 .dark {
   --color-primary: #FFC107;
 
-  --color-selection-background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --color-selection: color-mix(in srgb, var(--color-primary) 20%, transparent);
 
   --color-muted: #292524;
   --color-muted-foreground: #82868c;
 
-  --color-background-start-rgb: #0c192a;
-  --color-background-end-rgb: #15263d;
+  --color-body: #0c192a;
 }
 
 @theme inline {
   --color-primary: var(--color-primary);
 
-  --color-selection-background: var(--color-selection-background);
+  --color-selection: var(--color-selection);
 
   --color-muted: var(--color-muted);
   --color-muted-foreground: var(--color-muted-foreground);
 
-  --color-background-start-rgb: var(--color-background-start-rgb);
-  --color-background-end-rgb: var(--color-background-end-rgb);
+  --color-body: var(--color-body);
 
   --font-main: var(--font-main);
 }
@@ -52,11 +49,11 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 
-  @apply bg-linear-to-bl from-background-start-rgb to-background-end-rgb;
+  @apply bg-body;
 
 
 }
 
 ::selection {
-  @apply bg-selection-background;
+  @apply bg-selection;
 }
