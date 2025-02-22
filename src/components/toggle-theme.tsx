@@ -22,10 +22,10 @@ export function ToggleTheme() {
     setTheme("light");
   };
 
-  const setThemeRosePine = () => {
-    window.localStorage.setItem("theme", "rose-pine-moon");
-    setTheme("rose-pine-moon");
-  };
+  //const setThemeRosePine = () => {
+  //  window.localStorage.setItem("theme", "rose-pine-moon");
+  //  setTheme("rose-pine-moon");
+  //};
 
   console.log(theme);
 
