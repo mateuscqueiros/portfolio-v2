@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router";
 import { BlogArticlePreview } from "../components/preview";
 import { LoadingSupense } from "../../../components/loading";
-import { use, useState } from "react";
+import { use } from "react";
 import { getAllArticles } from "../api";
 import { BlogArticleType, BlogSourceType } from "../blog.types";
 import { getArticle } from "../lib";
@@ -19,8 +19,7 @@ export function BlogHomePage() {
 }
 
 export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
-  const [shouldFilter, setShouldFilter] = useState(true);
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const result = use<BlogSourceType[]>(articlesPromise);
 
   if (result.length === 0)
@@ -37,7 +36,7 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
       .map((t) => t.toLowerCase()) || [];
 
   const filteredArticles =
-    shouldFilter && filterTags.length > 0
+    filterTags.length > 0
       ? articles.filter((a) =>
           a.tags.map((t) => filterTags.includes(t)).includes(true),
         )
@@ -49,19 +48,19 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
 
   return (
     <div className="max-w-4xl w-full mx-auto">
-      <div
-        className="w-full flex justify-center text-muted-foreground cursor-pointer hover:underline"
-        onClick={() => setShouldFilter(!shouldFilter)}
-      >
-        {shouldFilter && filterTags.length > 0 && (
-          <>
-            <span className="mr-2">Filtrando resultados para:</span>
-            {filterTags.map((tag) => (
-              <ArticleTag key={tag} tag={tag} />
-            ))}
-          </>
-        )}
-      </div>
+      {filterTags.length > 0 && (
+        <div
+          className="w-full flex justify-center text-muted-foreground cursor-pointer hover:underline mb-8"
+          onClick={() => {
+            setSearchParams(undefined);
+          }}
+        >
+          <span>Filtrando resultados para:</span>
+          {filterTags.map((tag) => (
+            <ArticleTag key={tag} tag={tag} />
+          ))}
+        </div>
+      )}
       <div className="flex flex-col items-center w-full space-y-12 pb-12">
         {articles &&
           sortedArticles.map((article) => (

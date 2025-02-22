@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router";
 
 const headerLinks = [
   { name: "home", href: "/" },
-  { name: "blog", href: "/blog" },
+  { name: "notes", href: "/notes" },
   { name: "resume", href: "/resume-en.pdf" },
 ];
 

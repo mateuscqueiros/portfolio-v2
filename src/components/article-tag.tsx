@@ -11,7 +11,7 @@ export function ArticleTag({ tag, noLink = false }: ArticleTagProps) {
       {noLink ? (
         <>#{tag}</>
       ) : (
-        <Link to={`/blog?tags=${tag}`} key={tag}>
+        <Link to={`/notes?tags=${tag}`} key={tag}>
           #{tag}
         </Link>
       )}

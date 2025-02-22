@@ -6,7 +6,7 @@ import { ArticleTag } from "../../../components/article-tag";
 export function BlogArticlePreview({ article }: { article: BlogArticleType }) {
   return (
     <div className="w-full flex flex-col not-prose max-w-full">
-      <Link className="group w-fit" to={`/blog/${article.id}`}>
+      <Link className="group w-fit" to={`/notes/${article.id}`}>
         <div className="w-full flex flex-col justify-start space-y-2">
           <h2 className="text-xl font-bold group-hover:text-primary group-hover:underline decoration-1">
             {article.title}

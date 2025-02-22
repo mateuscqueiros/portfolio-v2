@@ -24,35 +24,66 @@ export function HomePage() {
       <section>
         <h2>Trabalho</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className="space-y-4 prose-p:my-0">
+          <div>
+            <a
+              target="_blank"
+              href="https://www.calian.com/"
+              className="block mb-1 font-mono font-bold"
+            >
+              Calian Corporate
+            </a>
+            <div className="text-sm">
+              <p>Desenvolvedor Full Stack</p>
+              <p>Mar.2025 - atual</p>
+            </div>
+          </div>
+
+          <div>
+            <a
+              target="_blank"
+              href="https://www.fiap.com.br/"
+              className="block mb-1 font-mono font-bold"
+            >
+              Fiap Treinamentos
+            </a>
+            <div className="text-sm">
+              <p>Professor de Programação</p>
+              <p>Jan.2024 - atual</p>
+            </div>
+          </div>
+
+          <div>
+            <a
+              target="_blank"
+              href="https://github.com/mateuscqueiros/mateuscqueiros.github.io"
+              className="block mb-1 font-mono font-bold"
+            >
+              Hcode Treinamentos
+            </a>
+            <div className="text-sm">
+              <p>Desenvolvedor Full Stack</p>
+              <p>Jun.2020 - atual</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h2>Trabalho</h2>
+        <h2>Notas</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
           dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
           amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit.
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </section>
 
-      <section>
-        <h2>Trabalho</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </section>
       <section>
         <h2>Contato</h2>
         <p>
