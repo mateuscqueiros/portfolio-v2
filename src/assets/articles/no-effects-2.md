@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat nisl 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. `Maecenas` volutpat nisl quis pellentesque porttitor. Maecenas sed tincidunt nisl. Pellentesque ac tortor non lectus hendrerit condimentum molestie ut justo.
 
-```js
+```typescript
 const a = true;
 function getValue(item: ContentWithValue): string {
   const children = item.children[0];
@@ -37,6 +37,7 @@ function getValue(item: ContentWithValue): string {
 
 function getValue(item: ContentWithValue): string {
   const children = item.children[0];
+  const string = "lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
   return children.value;
 }

@@ -26,7 +26,7 @@ export function BlogArticleContent({ content }: BlogArticleType) {
                 {...rest}
                 PreTag="div"
                 children={String(children).replace(/\n$/, "")}
-                language="javascript"
+                language={match[1]}
                 style={atomOneDark}
                 className="not-prose !p-6"
               />

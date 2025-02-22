@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 
 export function ToggleTheme() {
+  const nativeDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
   const [theme, setTheme] = useState(
-    () => window.localStorage.getItem("theme") || "dark",
+    () =>
+      window.localStorage.getItem("theme") || (nativeDark ? "dark" : "light"),
   );
+
+  console.log(window.matchMedia);
 
   const setThemeDark = () => {
     window.localStorage.setItem("theme", "dark");
@@ -15,15 +22,29 @@ export function ToggleTheme() {
     setTheme("light");
   };
 
+  const setThemeRosePine = () => {
+    window.localStorage.setItem("theme", "rose-pine-moon");
+    setTheme("rose-pine-moon");
+  };
+
+  console.log(theme);
+
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
     const meta: any = document.querySelector("meta[name='theme-color']");
     if (!meta) return;
-    meta.content = theme === "dark" ? "#0c192a" : "#ffffff";
+
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      meta.content = "#0c192a";
+    }
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+      meta.content = "#ffffff";
+    }
+    if (theme === "rose-pine-moon") {
+      document.documentElement.classList.remove("dark");
+      meta.content = "#2a273f";
+    }
   }, [theme]);
 
   return (

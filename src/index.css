@@ -1,7 +1,9 @@
 @import "tailwindcss";
+
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant rose-pine-moon (&:where(.rose-pine-moon, .rose-pine-moon *));
 
 :root {
   --color-primary: #f0b100;

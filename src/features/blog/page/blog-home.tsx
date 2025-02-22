@@ -30,7 +30,7 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
     getArticle(article.content),
   );
 
-  let filterTags: string[] =
+  const filterTags: string[] =
     searchParams
       .get("tags")
       ?.split(",")
