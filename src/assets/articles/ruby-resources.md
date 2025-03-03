@@ -1,14 +1,14 @@
 ---
 title: Conteúdos para Ruby
 tags: ruby
-createdAt: 2024-01-01T19:56:59Z
-lastUpdate: 2023-12-12T19:56:59Z
+createdAt: 2024-02-04T19:56:59Z
+lastUpdate: 2023-12-04T19:56:59Z
 author: Mateus Queirós
 id: ruby-resources
-shortDescription: Tenho estudado muito Ruby ultimamente.
+shortDescription: I have been studying a lot of Ruby lately.
 ---
 
-Tenho estudado muito Ruby ultimamente. Aqui estão alguns dos recursos que mais me ajudaram.
+I have been studying a lot of Ruby lately. Here are some resources I found useful.
 
 ## People
 

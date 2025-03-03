@@ -1,37 +1,47 @@
 const socials = [
   { name: "Github", href: "https://github.com/mateuscqueiros" },
-  { name: "Linkedin", href: "https://www.linkedin.com/in/mateuscqueiros/" },
-  { name: "Email", href: "mailto:mateuscqueiros@gmail.com" },
+  { name: "Linkedin", href: "https://www.linkedin.com/in/mateuscqueiros" },
+  {
+    name: "Email",
+    title: "mateuscqueiros@gmail.com",
+    href: "mailto:mateuscqueiros@gmail.com",
+  },
 ];
 
 export function HomePage() {
   return (
-    <div className="space-y-12 prose-headings:dark:text-white prose-h2:mb-4 prose-headings:mt-0 prose-h2:font-semibold">
+    <div className="space-y-12 prose-headings:dark:text-white prose-h2:mb-4 prose-headings:mt-0 prose-h2:font-semibold prose-p:last:mb-0">
       <section className="w-full flex flex-col items-start">
         <img
           src="/me.jpg"
           alt="me"
           className="w-full max-w-[90px] rounded-full not-prose mb-8"
         />
-        <h1 className="font-mono !mb-0 !text-3xl">Olá, sou Mateus</h1>
+        <h1 className="font-mono !mb-0 !text-3xl">Hello, I'm Mateus!</h1>
         <p className="!mb-0">
-          I'm a software engineer focused on delivering high-quality products. I
-          enjoy working where design and engineering intersect, building
-          software that's visually appealing and technically solid.
+          I'm a software developer and instructor with a passion for building
+          scalable solutions. With expertise in React, Next.js, Node.js, and Go,
+          I create high-performance applications while focusing on user
+          experience and optimization.
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>
+          I also teach programming, helping others master front-end and back-end
+          technologies through a hands-on approach. Whether coding or mentoring,
+          my goal is to create, improve, and share knowledge.
+        </p>
       </section>
       <section>
-        <h2>Trabalho</h2>
+        <h2>History</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          I’ve learned to adapt to different challenges, whether developing
+          applications or teaching programming. Flexibility and attention to
+          detail have been key in delivering practical solutions. Every project
+          has been an opportunity to stay open to new ideas and continue
+          improving.
         </p>
         <div className="space-y-4 prose-p:my-0">
-          <div>
-            <a
+          {/*<div>
+          <a
               target="_blank"
               href="https://www.calian.com/"
               className="block mb-1 font-mono font-bold"
@@ -40,9 +50,9 @@ export function HomePage() {
             </a>
             <div className="text-sm">
               <p>Desenvolvedor Full Stack</p>
-              <p>Mar.2025 - atual</p>
+              <p>Mar. 2025 - atual</p>
             </div>
-          </div>
+          </div>*/}
 
           <div>
             <a
@@ -53,8 +63,8 @@ export function HomePage() {
               Fiap Treinamentos
             </a>
             <div className="text-sm">
-              <p>Professor de Programação</p>
-              <p>Jan.2024 - atual</p>
+              <p>Programming Menthoring</p>
+              <p>Jan. 2024 - atual</p>
             </div>
           </div>
 
@@ -64,17 +74,21 @@ export function HomePage() {
               href="https://github.com/mateuscqueiros/mateuscqueiros.github.io"
               className="block mb-1 font-mono font-bold"
             >
-              Hcode Treinamentos
+              Hcode Consultoria e Tecnologia
             </a>
             <div className="text-sm">
-              <p>Desenvolvedor Full Stack</p>
-              <p>Jun.2020 - atual</p>
+              <p>Full-Stack Developer and Instructor</p>
+              <p>Jun. 2020 - current</p>
+            </div>
+            <div className="text-sm mt-2">
+              <p>Technical Support</p>
+              <p>Jun. 2020 - Jun.2022</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      {/*<section>
         <h2>Notas</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
@@ -82,14 +96,11 @@ export function HomePage() {
           amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit.
         </p>
-      </section>
+      </section>*/}
 
       <section>
         <h2>Contato</h2>
-        <p>
-          Se você tem algum projeto em mente, ou tem alguma proposta, estes são
-          meus links.
-        </p>
+        <p>If you have any project or proposal in mind these are my links.</p>
         <ul className="prose-ul:m-0 !m-0 !p-0 prose-ul:p-0 flex flex-col gap-y-4">
           {socials.map((social) => (
             <li
@@ -103,7 +114,7 @@ export function HomePage() {
                 rel="noreferrer"
                 className="block min-w-[350px]"
               >
-                {social.href}
+                {social.title ?? social.href}
               </a>
             </li>
           ))}

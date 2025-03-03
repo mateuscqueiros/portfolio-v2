@@ -5,6 +5,7 @@ import { BlogArticlePage } from "./features/blog/page/article";
 import { LoadingSupense } from "./components/loading";
 import { MainLayout } from "./components/layout";
 import { NoMatch } from "./pages/no-match";
+import { ProjectsPage } from "./pages/projects";
 
 // https://ouassim.tech/
 
@@ -20,6 +21,8 @@ function App() {
               <Route index element={<BlogHomePage />} />
               <Route path=":id" element={<BlogArticlePage />} />
             </Route>
+
+            <Route path="/projects" element={<ProjectsPage />} />
 
             <Route path="*" element={<NoMatch />} />
           </Route>

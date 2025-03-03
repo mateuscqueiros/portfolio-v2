@@ -8,7 +8,7 @@ export function MainLayout({}: MainLayoutProps) {
   return (
     <>
       <div
-        className={`relative max-w-3xl flex flex-col items-center mx-auto px-3 pb-20 min-h-dvh
+        className={`relative max-w-3xl mt-[60px] flex flex-col items-center mx-auto px-3 pb-20 min-h-[calc(100vh-60px)]
         prose prose-sm md:prose-base prose-slate dark:prose-invert prose-a:hover:text-primary`}
       >
         <Header />

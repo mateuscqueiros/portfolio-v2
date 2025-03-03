@@ -47,7 +47,15 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 
+  width: calc(100vw - 2rem);
+
   @apply bg-body transition-colors duration-100;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
 }
 
 ::selection {

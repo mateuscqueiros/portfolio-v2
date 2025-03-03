@@ -48,6 +48,18 @@ export function BlogHome({ articlesPromise }: { articlesPromise: any }) {
 
   return (
     <div className="max-w-4xl w-full mx-auto">
+      <h1 className="!mt-0 !mb-2">Notes</h1>
+      <p>
+        Some thoughts about programming in general. Also refer to{" "}
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/mateuscqueiros/recent-activity/all/"
+        >
+          my Linkedin
+        </a>{" "}
+        for updates.
+      </p>
+      <hr className="!my-8" />
       {filterTags.length > 0 && (
         <div
           className="w-full flex justify-center text-muted-foreground cursor-pointer hover:underline mb-8"
