@@ -1,5 +1,5 @@
 ---
-title: Conteúdos para Ruby
+title: Ruby Resources
 tags: ruby
 createdAt: 2024-02-04T19:56:59Z
 lastUpdate: 2023-12-04T19:56:59Z
