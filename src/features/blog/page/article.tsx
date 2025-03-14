@@ -51,7 +51,7 @@ export function BlogArticle({ getArticle }: { getArticle: any }) {
           </h1>
           <div className="flex flex-row flex-wrap gap-y-2 gap-x-4 justify-between items-center text-sm text-muted-foreground">
             <div>
-              <span className="">Publicado em </span>
+              <span className="">Published at </span>
               <time data-time={article.createdAt}>
                 {dayjs(article.createdAt).format("DD/MM/YYYY")}
               </time>

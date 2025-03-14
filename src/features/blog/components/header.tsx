@@ -25,7 +25,7 @@ export function BlogHeader() {
           <span>- Wilson Brown</span>
         </span> */}
         <span className="flex flex-col items-center text-gray-500 dark:text-gray-400 text-md">
-          <i>Desenvolvimento web e programação</i>
+          <i>Web development and programming</i>
         </span>
       </header>
     </>
