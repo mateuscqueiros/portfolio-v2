@@ -71,7 +71,7 @@ export function HomePage() {
           <div>
             <a
               target="_blank"
-              href="https://github.com/mateuscqueiros/mateuscqueiros.github.io"
+              href="https://hcode.com.br/"
               className="block mb-1 font-mono font-bold"
             >
               Hcode Consultoria e Tecnologia
